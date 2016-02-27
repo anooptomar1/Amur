@@ -40,6 +40,8 @@
 			<false/>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Using to figure out where you are!</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

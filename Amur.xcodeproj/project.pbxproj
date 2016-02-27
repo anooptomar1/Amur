@@ -16,6 +16,17 @@
 		2E13B8D61C821E3C004DD0C2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E13B8D41C821E3C004DD0C2 /* LaunchScreen.storyboard */; };
 		2E13B8E11C821E3C004DD0C2 /* AmurTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B8E01C821E3C004DD0C2 /* AmurTests.m */; };
 		2E13B8EC1C821E3C004DD0C2 /* AmurUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B8EB1C821E3C004DD0C2 /* AmurUITests.m */; };
+		2E5BC5B81C82282F00E44618 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5B71C82282F00E44618 /* AFNetworking.framework */; };
+		2E5BC5B91C82282F00E44618 /* AFNetworking.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5B71C82282F00E44618 /* AFNetworking.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2E5BC5BE1C822CF800E44618 /* ARCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC5BD1C822CF800E44618 /* ARCoordinate.m */; };
+		2E5BC5C11C822D0C00E44618 /* ARGeoCoordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC5C01C822D0C00E44618 /* ARGeoCoordinate.m */; };
+		2E5BC5C41C822D1F00E44618 /* ARKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC5C31C822D1F00E44618 /* ARKit.m */; };
+		2E5BC5C91C822D4C00E44618 /* AugmentedRealityController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC5C81C822D4C00E44618 /* AugmentedRealityController.m */; };
+		2E5BC5CC1C822D6D00E44618 /* GEOLocations.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC5CB1C822D6D00E44618 /* GEOLocations.m */; };
+		2E5BC5CE1C8231CC00E44618 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5CD1C8231CC00E44618 /* CoreLocation.framework */; };
+		2E5BC5D01C823EBA00E44618 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5CF1C823EBA00E44618 /* AVFoundation.framework */; };
+		2E5BC5D21C823EC200E44618 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5D11C823EC200E44618 /* AVKit.framework */; };
+		2E5BC5D41C824AB900E44618 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E5BC5D31C824AB900E44618 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +45,20 @@
 			remoteInfo = Amur;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2E5BC5BA1C82282F00E44618 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2E5BC5B91C82282F00E44618 /* AFNetworking.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2E13B8C01C821E3C004DD0C2 /* Amur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amur.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +79,23 @@
 		2E13B8E71C821E3C004DD0C2 /* AmurUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmurUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E13B8EB1C821E3C004DD0C2 /* AmurUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmurUITests.m; sourceTree = "<group>"; };
 		2E13B8ED1C821E3C004DD0C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5BC5B71C82282F00E44618 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = Carthage/Build/iOS/AFNetworking.framework; sourceTree = "<group>"; };
+		2E5BC5BC1C822CF200E44618 /* ARCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARCoordinate.h; sourceTree = "<group>"; };
+		2E5BC5BD1C822CF800E44618 /* ARCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARCoordinate.m; sourceTree = "<group>"; };
+		2E5BC5BF1C822D0300E44618 /* ARGeoCoordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARGeoCoordinate.h; sourceTree = "<group>"; };
+		2E5BC5C01C822D0C00E44618 /* ARGeoCoordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARGeoCoordinate.m; sourceTree = "<group>"; };
+		2E5BC5C21C822D1900E44618 /* ARKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARKit.h; sourceTree = "<group>"; };
+		2E5BC5C31C822D1F00E44618 /* ARKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARKit.m; sourceTree = "<group>"; };
+		2E5BC5C51C822D2700E44618 /* ARLocationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARLocationDelegate.h; sourceTree = "<group>"; };
+		2E5BC5C61C822D3500E44618 /* ARViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewProtocol.h; sourceTree = "<group>"; };
+		2E5BC5C71C822D4500E44618 /* AugmentedRealityController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AugmentedRealityController.h; sourceTree = "<group>"; };
+		2E5BC5C81C822D4C00E44618 /* AugmentedRealityController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AugmentedRealityController.m; sourceTree = "<group>"; };
+		2E5BC5CA1C822D6800E44618 /* GEOLocations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEOLocations.h; sourceTree = "<group>"; };
+		2E5BC5CB1C822D6D00E44618 /* GEOLocations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEOLocations.m; sourceTree = "<group>"; };
+		2E5BC5CD1C8231CC00E44618 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2E5BC5CF1C823EBA00E44618 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2E5BC5D11C823EC200E44618 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		2E5BC5D31C824AB900E44618 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +103,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5BC5D41C824AB900E44618 /* QuartzCore.framework in Frameworks */,
+				2E5BC5D21C823EC200E44618 /* AVKit.framework in Frameworks */,
+				2E5BC5D01C823EBA00E44618 /* AVFoundation.framework in Frameworks */,
+				2E5BC5CE1C8231CC00E44618 /* CoreLocation.framework in Frameworks */,
+				2E5BC5B81C82282F00E44618 /* AFNetworking.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +135,7 @@
 				2E13B8DF1C821E3C004DD0C2 /* AmurTests */,
 				2E13B8EA1C821E3C004DD0C2 /* AmurUITests */,
 				2E13B8C11C821E3C004DD0C2 /* Products */,
+				2E5BC5B61C8227D700E44618 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +152,7 @@
 		2E13B8C21C821E3C004DD0C2 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				2E5BC5BB1C822CE000E44618 /* ARKIT */,
 				2E13B8C61C821E3C004DD0C2 /* AppDelegate.h */,
 				2E13B8C71C821E3C004DD0C2 /* AppDelegate.m */,
 				2E13B8C91C821E3C004DD0C2 /* FirstViewController.h */,
@@ -145,6 +194,37 @@
 			path = AmurUITests;
 			sourceTree = "<group>";
 		};
+		2E5BC5B61C8227D700E44618 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E5BC5D31C824AB900E44618 /* QuartzCore.framework */,
+				2E5BC5D11C823EC200E44618 /* AVKit.framework */,
+				2E5BC5CF1C823EBA00E44618 /* AVFoundation.framework */,
+				2E5BC5CD1C8231CC00E44618 /* CoreLocation.framework */,
+				2E5BC5B71C82282F00E44618 /* AFNetworking.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2E5BC5BB1C822CE000E44618 /* ARKIT */ = {
+			isa = PBXGroup;
+			children = (
+				2E5BC5BC1C822CF200E44618 /* ARCoordinate.h */,
+				2E5BC5BD1C822CF800E44618 /* ARCoordinate.m */,
+				2E5BC5BF1C822D0300E44618 /* ARGeoCoordinate.h */,
+				2E5BC5C01C822D0C00E44618 /* ARGeoCoordinate.m */,
+				2E5BC5C21C822D1900E44618 /* ARKit.h */,
+				2E5BC5C31C822D1F00E44618 /* ARKit.m */,
+				2E5BC5C51C822D2700E44618 /* ARLocationDelegate.h */,
+				2E5BC5C61C822D3500E44618 /* ARViewProtocol.h */,
+				2E5BC5C71C822D4500E44618 /* AugmentedRealityController.h */,
+				2E5BC5C81C822D4C00E44618 /* AugmentedRealityController.m */,
+				2E5BC5CA1C822D6800E44618 /* GEOLocations.h */,
+				2E5BC5CB1C822D6D00E44618 /* GEOLocations.m */,
+			);
+			name = ARKIT;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,6 +235,7 @@
 				2E13B8BC1C821E3C004DD0C2 /* Sources */,
 				2E13B8BD1C821E3C004DD0C2 /* Frameworks */,
 				2E13B8BE1C821E3C004DD0C2 /* Resources */,
+				2E5BC5BA1C82282F00E44618 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -212,6 +293,7 @@
 				TargetAttributes = {
 					2E13B8BF1C821E3C004DD0C2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = DA6Q863M36;
 					};
 					2E13B8DB1C821E3C004DD0C2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -275,10 +357,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E5BC5C11C822D0C00E44618 /* ARGeoCoordinate.m in Sources */,
 				2E13B8CE1C821E3C004DD0C2 /* SecondViewController.m in Sources */,
 				2E13B8C81C821E3C004DD0C2 /* AppDelegate.m in Sources */,
+				2E5BC5BE1C822CF800E44618 /* ARCoordinate.m in Sources */,
 				2E13B8CB1C821E3C004DD0C2 /* FirstViewController.m in Sources */,
+				2E5BC5C41C822D1F00E44618 /* ARKit.m in Sources */,
+				2E5BC5CC1C822D6D00E44618 /* GEOLocations.m in Sources */,
 				2E13B8C51C821E3C004DD0C2 /* main.m in Sources */,
+				2E5BC5C91C822D4C00E44618 /* AugmentedRealityController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,10 +504,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Amur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -428,10 +522,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Amur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -502,6 +603,7 @@
 				2E13B8F21C821E3C004DD0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E13B8F31C821E3C004DD0C2 /* Build configuration list for PBXNativeTarget "AmurTests" */ = {
 			isa = XCConfigurationList;
@@ -510,6 +612,7 @@
 				2E13B8F51C821E3C004DD0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E13B8F61C821E3C004DD0C2 /* Build configuration list for PBXNativeTarget "AmurUITests" */ = {
 			isa = XCConfigurationList;
@@ -518,6 +621,7 @@
 				2E13B8F81C821E3C004DD0C2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
