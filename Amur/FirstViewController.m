@@ -19,9 +19,22 @@
 
 @implementation FirstViewController
 
+-(void)viewWillAppear:(BOOL)animated{
+   
+    
+    int i = 0;
+    for(UIView *view in [self.view subviews]){
+        [self setAnimation:view withNum:i];
+        i++;
+    }
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+    
     
 
 #if !TARGET_IPHONE_SIMULATOR
@@ -65,6 +78,8 @@
     
     [self startStandardUpdates];
     
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -102,7 +117,7 @@
     
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
-    if(abs(howRecent) < 15.0){
+    if(abs(howRecent) > 15.0){
         
         
         NSString *urlString = @"https://api.breezometer.com/baqi";
@@ -134,7 +149,7 @@
                 }
 
                 
-                NSLog(@"JSON: %@",responseObject);
+                //NSLog(@"JSON: %@",responseObject);
                 
                 int AQI = [responseObject[@"breezometer_aqi"] intValue];
                 
@@ -142,70 +157,12 @@
                 
                 NSString *data = [NSString stringWithFormat:@"AQI : %d\nDescription: %@ ",AQI,description];
                 
-                UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Hello!" message:data preferredStyle:UIAlertControllerStyleAlert];
                 
-                UIAlertAction *okayBtn = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+          
+                [self generateButtonsForView:AQI];
+             
                 
-                [alert addAction:okayBtn];
-                
-                int start = 10;
-                int diff = 50;
-                int origin = 60;
-                int yDiff = 10;
-                int numOfBubbles = [self getBubbleCount:AQI];
-                
-               
-                
-                for(int i = 0; i < numOfBubbles; i++){
-                    
-                    int y = origin;
-                    
-                    if(i % 2 != 0){
-                        y -= yDiff;
-                    }
-                    float duration = 0.5f;
-                    if(i % 2 == 0){
-                        duration -= 0.2f;
-                        
-                    }
-                    
-                  
-                    
-                    UIView *bubble = [[UITextField alloc] initWithFrame:CGRectMake(start, y, 30, 30)];
-                    
-                    [bubble setBackgroundColor:[UIColor orangeColor]];
-                    
-                    
-                    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
-                    
-                    [animation setDuration:duration];
-                    [animation setRepeatCount:HUGE_VALF];
-                    float bounce = 10.0f;
-                    if(i % 3 == 0){
-                        
-                        bounce = -bounce;
-                        
-                    }
-                    
-                    [animation setAutoreverses:YES];
-                    
-                    [animation setFromValue:[NSValue valueWithCGPoint:
-                                             CGPointMake([bubble center].x, [bubble center].y - bounce)]];
-                    [animation setToValue:[NSValue valueWithCGPoint:
-                                           CGPointMake([bubble center].x, [bubble center].y + bounce)]];
-                    [[bubble layer] addAnimation:animation forKey:@"position"];
-                    
-                    [self setRoundedView:bubble toDiameter:15.0f];
-                    
-                    [self.view addSubview:bubble];
-                    
-                    start += diff;
-
-                }
-                
-                
-                
-                //[self presentViewController:alert animated:YES completion:nil];
+              
                 
                 
             }
@@ -218,6 +175,79 @@
     }
     
     
+}
+
+-(void)generateButtonsForView:(int)AQI {
+    float viewWidth = self.view.frame.size.width - 50;
+    float viewHeight = self.view.frame.size.height - 30;
+    UIView *initialView = [[UIView alloc] initWithFrame:CGRectMake(arc4random() % (int)viewWidth, arc4random() % (int)viewHeight, 50, 30)];
+    initialView.backgroundColor = [UIColor orangeColor];
+    [self setRoundedView:initialView toDiameter:15.0f];
+    [self setAnimation:initialView withNum:0];
+    [self.view addSubview:initialView];
+    int numViews = 0;
+    while (numViews < 19) {
+        BOOL goodView = YES;
+        UIView *candidateView = [[UIView alloc] initWithFrame:CGRectMake(arc4random() % (int)viewWidth, arc4random() % (int)viewHeight, 50, 30)];
+        candidateView.backgroundColor = [UIColor orangeColor];
+        for (UIView *placedView in self.view.subviews) {
+            if (CGRectIntersectsRect(CGRectInset(candidateView.frame, -10, -10), placedView.frame)) {
+                goodView = NO;
+                break;
+            }
+        }
+        if (goodView) {
+        
+            [self setAnimation:candidateView withNum:numViews];
+            
+            [self setRoundedView:candidateView toDiameter:15.0f];
+                
+        
+            [self setRoundedView:candidateView toDiameter:15.0f];
+            [self.view addSubview:candidateView];
+            numViews += 1;
+        }
+    }
+}
+
+
+-(void)setAnimation:(UIView *)view withNum:(int)num{
+    
+    float duration = 0.5f;
+    if(num % 2 == 0){
+        duration -= 0.2f;
+        
+    }
+    
+    
+    
+    UIView *bubble = view;
+    
+    
+    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"position"];
+    
+    [animation setDuration:duration];
+    [animation setRepeatCount:HUGE_VALF];
+    float bounce = 10.0f;
+    if(num % 3 == 0){
+        
+        bounce = -bounce;
+        
+    }
+    
+    [animation setAutoreverses:YES];
+    
+    [animation setFromValue:[NSValue valueWithCGPoint:
+                             CGPointMake([bubble center].x, [bubble center].y - bounce)]];
+    [animation setToValue:[NSValue valueWithCGPoint:
+                           CGPointMake([bubble center].x, [bubble center].y + bounce)]];
+    [[bubble layer] addAnimation:animation forKey:@"position"];
+    
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.view.layer removeAllAnimations]; // or whatever you need to use to remove your specific animation
 }
 
 -(int)getBubbleCount:(int)AQI{

@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Camera-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="FirstViewController" sceneMemberID="viewController">
@@ -39,13 +39,13 @@
                             <constraint firstAttribute="centerY" secondItem="KQZ-1w-vlD" secondAttribute="centerY" id="exm-UA-ej4"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="icons_color-03.png" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second-->
+        <!--Location-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
@@ -79,16 +79,73 @@
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Location" image="icons_color-01.png" id="cPa-gy-q4n"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Amur-->
+        <scene sceneID="wji-Ii-kfB">
+            <objects>
+                <viewController id="eaW-Ax-cI5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Ts-Zp-gXy"/>
+                        <viewControllerLayoutGuide type="bottom" id="s1n-cM-nTU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L47-6d-Npc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Amur" image="icons_color-02.png" id="WOz-f1-Pqr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRn-uW-9jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="824" y="1103"/>
+        </scene>
+        <!--Help Out-->
+        <scene sceneID="bYN-F9-UEI">
+            <objects>
+                <viewController id="02m-sX-8T5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="StW-KF-VVu"/>
+                        <viewControllerLayoutGuide type="bottom" id="i0b-UY-SfP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9gB-5D-fUu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Help Out" image="icons_color-04.png" id="seJ-Gi-I56"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COg-wu-c3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="1787"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="GRa-il-Om5">
+            <objects>
+                <viewController id="mBl-m7-Ioj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qU6-Ox-F9K"/>
+                        <viewControllerLayoutGuide type="bottom" id="kxd-7v-hpj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3nM-wa-rII">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="icons_color-05.png" id="ktO-Wb-DbV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZNZ-zF-Nky" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="1763"/>
+        </scene>
+        <!--God View Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="GodViewController" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -96,8 +153,11 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="eaW-Ax-cI5" kind="relationship" relationship="viewControllers" id="tZO-i1-gIg"/>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="02m-sX-8T5" kind="relationship" relationship="viewControllers" id="JoP-sR-QGg"/>
+                        <segue destination="mBl-m7-Ioj" kind="relationship" relationship="viewControllers" id="bzS-y0-bFj"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -106,7 +166,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="icons_color-01.png" width="37" height="37"/>
+        <image name="icons_color-02.png" width="37" height="37"/>
+        <image name="icons_color-03.png" width="37" height="37"/>
+        <image name="icons_color-04.png" width="37" height="37"/>
+        <image name="icons_color-05.png" width="37" height="37"/>
     </resources>
 </document>
