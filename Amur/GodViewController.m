@@ -23,17 +23,15 @@
     int i = 0;
     for(UIViewController *vc in self.viewControllers){
         if(i == 0){
-            vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-01.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        }
-        else if(i == 1){
             vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-02.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }
-        else if(i == 2){
+        else if(i == 1){
             vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-03.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }
-        else if(i == 3){
+        else if(i == 2){
             vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-04.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-        }else{
+        }
+        else if(i == 3){
             vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-05.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
         }
         i++;

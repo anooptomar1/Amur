@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import <AVFoundation/AVFoundation.h>
 #import <QuartzCore/QuartzCore.h>
+#import "SWRevealViewController.h"
 
 @interface FirstViewController () <CLLocationManagerDelegate>
 
@@ -34,7 +35,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
+   self.sidebarButton.image = [[UIImage imageNamed:@"top_bar_icons-07.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
+    ;
     
 
 #if !TARGET_IPHONE_SIMULATOR
@@ -117,7 +119,7 @@
     
     NSTimeInterval howRecent = [eventDate timeIntervalSinceNow];
     
-    if(abs(howRecent) > 15.0){
+    if(abs(howRecent) > 5.0){
         
         
         NSString *urlString = @"https://api.breezometer.com/baqi";
@@ -135,7 +137,7 @@
         NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
         
         AFURLSessionManager *sm = [[AFURLSessionManager alloc] initWithSessionConfiguration:config];
-        
+        NSLog(@"task being initialized");
         NSURLSessionDataTask *task = [sm dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
             
             if(error){
@@ -143,6 +145,7 @@
             }
             else{
                 
+                NSLog(@"NOT ERROR");
                 NSArray *viewsToRemove = [self.view subviews];
                 for (UIView *v in viewsToRemove) {
                     [v removeFromSuperview];
@@ -169,9 +172,15 @@
             
         }];
         
+        NSLog(@"resuming task");
+        
         [task resume];
         
+        NSLog(@"task resumed");
         
+    }
+    else{
+        NSLog(@"Nah");
     }
     
     

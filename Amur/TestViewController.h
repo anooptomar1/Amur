@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  TestViewController.h
 //  Amur
 //
 //  Created by Shreyas Hirday on 2/27/16.
@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <CoreLocation/CoreLocation.h>
 
-@interface FirstViewController : UIViewController
+@interface TestViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 
 @end
-
