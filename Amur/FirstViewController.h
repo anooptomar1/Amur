@@ -8,9 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#import "LocationViewController.h"
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController<sendDataProtocol>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
+- (IBAction)goToMap:(id)sender;
+
+@property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
+@property(weak,nonatomic) NSString* name;
+
 
 @end
 

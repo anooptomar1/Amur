@@ -43,6 +43,11 @@
 		2E5BC6031C827EF300E44618 /* top_bar_icons-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BC6021C827EF300E44618 /* top_bar_icons-06.png */; };
 		2E5BC6061C82808700E44618 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC6051C82808700E44618 /* SidebarTableViewController.m */; };
 		2E5BC6081C828B3900E44618 /* top_bar_icons-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BC6071C828B3900E44618 /* top_bar_icons-07.png */; };
+		2E9C56CB1C829B4900CF332D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9C56CA1C829B4900CF332D /* MapKit.framework */; };
+		2E9C56CE1C829CBF00CF332D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C56CD1C829CBF00CF332D /* LocationViewController.m */; };
+		2E9C56D11C82C41100CF332D /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C56D01C82C41100CF332D /* HexColors.m */; };
+		2E9C56D31C82DAA000CF332D /* bar_parts-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C56D21C82DAA000CF332D /* bar_parts-02.png */; };
+		2E9C56D51C82DAA900CF332D /* bar_parts-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C56D41C82DAA900CF332D /* bar_parts-01.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -132,6 +137,13 @@
 		2E5BC6041C82808700E44618 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		2E5BC6051C82808700E44618 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		2E5BC6071C828B3900E44618 /* top_bar_icons-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar_icons-07.png"; sourceTree = "<group>"; };
+		2E9C56CA1C829B4900CF332D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2E9C56CC1C829CBF00CF332D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		2E9C56CD1C829CBF00CF332D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
+		2E9C56CF1C82C3E300CF332D /* HexColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HexColors.h; sourceTree = "<group>"; };
+		2E9C56D01C82C41100CF332D /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
+		2E9C56D21C82DAA000CF332D /* bar_parts-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_parts-02.png"; sourceTree = "<group>"; };
+		2E9C56D41C82DAA900CF332D /* bar_parts-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_parts-01.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9C56CB1C829B4900CF332D /* MapKit.framework in Frameworks */,
 				2E5BC5D41C824AB900E44618 /* QuartzCore.framework in Frameworks */,
 				2E5BC5D21C823EC200E44618 /* AVKit.framework in Frameworks */,
 				2E5BC5D01C823EBA00E44618 /* AVFoundation.framework in Frameworks */,
@@ -208,6 +221,10 @@
 				2E5BC5FE1C827E9000E44618 /* TestViewController.m */,
 				2E5BC6041C82808700E44618 /* SidebarTableViewController.h */,
 				2E5BC6051C82808700E44618 /* SidebarTableViewController.m */,
+				2E9C56CC1C829CBF00CF332D /* LocationViewController.h */,
+				2E9C56CD1C829CBF00CF332D /* LocationViewController.m */,
+				2E9C56CF1C82C3E300CF332D /* HexColors.h */,
+				2E9C56D01C82C41100CF332D /* HexColors.m */,
 			);
 			path = Amur;
 			sourceTree = "<group>";
@@ -241,6 +258,7 @@
 		2E5BC5B61C8227D700E44618 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2E9C56CA1C829B4900CF332D /* MapKit.framework */,
 				2E5BC5D31C824AB900E44618 /* QuartzCore.framework */,
 				2E5BC5D11C823EC200E44618 /* AVKit.framework */,
 				2E5BC5CF1C823EBA00E44618 /* AVFoundation.framework */,
@@ -284,6 +302,8 @@
 				2E5BC5F51C8269D500E44618 /* icons_color-05@2x.png */,
 				2E5BC6021C827EF300E44618 /* top_bar_icons-06.png */,
 				2E5BC6071C828B3900E44618 /* top_bar_icons-07.png */,
+				2E9C56D41C82DAA900CF332D /* bar_parts-01.png */,
+				2E9C56D21C82DAA000CF332D /* bar_parts-02.png */,
 			);
 			name = Icons;
 			sourceTree = "<group>";
@@ -402,7 +422,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E9C56D31C82DAA000CF332D /* bar_parts-02.png in Resources */,
 				2E5BC5E71C82661500E44618 /* app_icons-04@2x.png in Resources */,
+				2E9C56D51C82DAA900CF332D /* bar_parts-01.png in Resources */,
 				2E5BC5F01C8269C500E44618 /* icons_color-02@2x.png in Resources */,
 				2E5BC5E31C82642F00E44618 /* app_icons-01@2x.png in Resources */,
 				2E5BC5E51C8265B200E44618 /* app_icons-02@2x.png in Resources */,
@@ -450,6 +472,8 @@
 				2E5BC5FF1C827E9000E44618 /* TestViewController.m in Sources */,
 				2E5BC5C41C822D1F00E44618 /* ARKit.m in Sources */,
 				2E5BC5CC1C822D6D00E44618 /* GEOLocations.m in Sources */,
+				2E9C56D11C82C41100CF332D /* HexColors.m in Sources */,
+				2E9C56CE1C829CBF00CF332D /* LocationViewController.m in Sources */,
 				2E5BC6061C82808700E44618 /* SidebarTableViewController.m in Sources */,
 				2E5BC5FA1C827AD200E44618 /* SWRevealViewController.m in Sources */,
 				2E13B8C51C821E3C004DD0C2 /* main.m in Sources */,
