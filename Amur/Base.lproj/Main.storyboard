@@ -113,7 +113,7 @@
         <!--Amur-->
         <scene sceneID="wji-Ii-kfB">
             <objects>
-                <viewController id="eaW-Ax-cI5" sceneMemberID="viewController">
+                <viewController id="eaW-Ax-cI5" customClass="WIYAViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ts-Zp-gXy"/>
                         <viewControllerLayoutGuide type="bottom" id="s1n-cM-nTU"/>
