@@ -164,8 +164,8 @@
     box.tag = 3;
     
     UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 15, 60, 60)];
-    [label setText:@"Lorem Ipsum"];
-    UIFont *font = [UIFont fontWithName:@"Avenir" size:12.0];
+    [label setText:[[[self class] facts] objectAtIndex:indexPath.row]];
+    UIFont *font = [UIFont fontWithName:@"Avenir" size:6.0];
     [label setFont:font];
     [label setNumberOfLines:0];
     [label setTextColor:[UIColor whiteColor]];
@@ -217,6 +217,17 @@
 }
 */
 
++(NSArray *)facts{
+    static NSArray *_facts;
+    static dispatch_once_t oneT;
+    dispatch_once(&oneT, ^{
+        
+        _facts = @[@"Conserve energy - turn off appliances and lights when you leave the room", @"Recycle paper, plastic, glass bottles, cardboard, and aluminum cans. (This conserves energy and reduces production emissions.)", @"Buy green electricity-produced by low-or even zero-pollution facilities",@"Wash clothes with warm or cold water instead of hot",@"Lower the thermostat on your water heater to 120F",@"Plant deciduous trees in locations around your home to provide shade in the summer, but to allow light in the winter",@"Buy ENERGY STAR products, including energy efficient lighting and appliances. They are environmentally friendly products.", @"Choose efficient, low-polluting models of vehicles", @"Choose products that have less pacakaging and are re-usable"];
+        
+    });
+    
+    return _facts;
+}
 
 + (NSArray *)imageNames
 {
