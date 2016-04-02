@@ -6,6 +6,9 @@
 //  Copyright © 2016 Shreyas Hirday. All rights reserved.
 //
 
+
+/****this is actually "how I can help"*****/
+
 #import "WIYAViewController.h"
 #import "HexColors.h"
 #import <QuartzCore/QuartzCore.h>
@@ -202,6 +205,7 @@
     return CGSizeMake(100, 100);
     
 }
+
 
 
 

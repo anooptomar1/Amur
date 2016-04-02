@@ -113,7 +113,7 @@
         <!--Amur-->
         <scene sceneID="wji-Ii-kfB">
             <objects>
-                <viewController id="eaW-Ax-cI5" customClass="WIYAViewController" sceneMemberID="viewController">
+                <viewController id="eaW-Ax-cI5" customClass="RealWIYAViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7Ts-Zp-gXy"/>
                         <viewControllerLayoutGuide type="bottom" id="s1n-cM-nTU"/>
@@ -132,7 +132,7 @@
         <!--Help Out-->
         <scene sceneID="bYN-F9-UEI">
             <objects>
-                <viewController id="02m-sX-8T5" sceneMemberID="viewController">
+                <viewController id="02m-sX-8T5" customClass="WIYAViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="StW-KF-VVu"/>
                         <viewControllerLayoutGuide type="bottom" id="i0b-UY-SfP"/>

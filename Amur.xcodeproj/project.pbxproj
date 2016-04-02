@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E024A2D1CB0497B00040DFA /* RealWIYAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E024A2C1CB0497B00040DFA /* RealWIYAViewController.m */; };
+		2E024A301CB056A300040DFA /* UIBezierPathExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E024A2F1CB056A300040DFA /* UIBezierPathExtension.m */; };
 		2E13B8C51C821E3C004DD0C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B8C41C821E3C004DD0C2 /* main.m */; };
 		2E13B8C81C821E3C004DD0C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B8C71C821E3C004DD0C2 /* AppDelegate.m */; };
 		2E13B8CB1C821E3C004DD0C2 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E13B8CA1C821E3C004DD0C2 /* FirstViewController.m */; };
@@ -92,6 +94,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2E024A2B1CB0497B00040DFA /* RealWIYAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RealWIYAViewController.h; sourceTree = "<group>"; };
+		2E024A2C1CB0497B00040DFA /* RealWIYAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RealWIYAViewController.m; sourceTree = "<group>"; };
+		2E024A2E1CB056A300040DFA /* UIBezierPathExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIBezierPathExtension.h; sourceTree = "<group>"; };
+		2E024A2F1CB056A300040DFA /* UIBezierPathExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIBezierPathExtension.m; sourceTree = "<group>"; };
 		2E13B8C01C821E3C004DD0C2 /* Amur.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Amur.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E13B8C41C821E3C004DD0C2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2E13B8C61C821E3C004DD0C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -248,6 +254,8 @@
 				2E9C56D01C82C41100CF332D /* HexColors.m */,
 				2EC3A12F1CA72D4A00BFAC59 /* WIYAViewController.h */,
 				2EC3A1301CA72D4A00BFAC59 /* WIYAViewController.m */,
+				2E024A2B1CB0497B00040DFA /* RealWIYAViewController.h */,
+				2E024A2C1CB0497B00040DFA /* RealWIYAViewController.m */,
 			);
 			path = Amur;
 			sourceTree = "<group>";
@@ -306,6 +314,8 @@
 				2E5BC5C81C822D4C00E44618 /* AugmentedRealityController.m */,
 				2E5BC5CA1C822D6800E44618 /* GEOLocations.h */,
 				2E5BC5CB1C822D6D00E44618 /* GEOLocations.m */,
+				2E024A2E1CB056A300040DFA /* UIBezierPathExtension.h */,
+				2E024A2F1CB056A300040DFA /* UIBezierPathExtension.m */,
 			);
 			name = ARKIT;
 			sourceTree = "<group>";
@@ -514,6 +524,8 @@
 				2E5BC5C41C822D1F00E44618 /* ARKit.m in Sources */,
 				2EC3A1311CA72D4A00BFAC59 /* WIYAViewController.m in Sources */,
 				2E5BC5CC1C822D6D00E44618 /* GEOLocations.m in Sources */,
+				2E024A2D1CB0497B00040DFA /* RealWIYAViewController.m in Sources */,
+				2E024A301CB056A300040DFA /* UIBezierPathExtension.m in Sources */,
 				2E9C56D11C82C41100CF332D /* HexColors.m in Sources */,
 				2E9C56CE1C829CBF00CF332D /* LocationViewController.m in Sources */,
 				2E5BC6061C82808700E44618 /* SidebarTableViewController.m in Sources */,
