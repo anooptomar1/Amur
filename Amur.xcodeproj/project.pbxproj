@@ -50,6 +50,7 @@
 		2E9C56D11C82C41100CF332D /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C56D01C82C41100CF332D /* HexColors.m */; };
 		2E9C56D31C82DAA000CF332D /* bar_parts-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C56D21C82DAA000CF332D /* bar_parts-02.png */; };
 		2E9C56D51C82DAA900CF332D /* bar_parts-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9C56D41C82DAA900CF332D /* bar_parts-01.png */; };
+		2EC0054D1CB0697000650222 /* ParticleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC0054C1CB0697000650222 /* ParticleViewController.swift */; };
 		2EC3A1311CA72D4A00BFAC59 /* WIYAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2EC3A1301CA72D4A00BFAC59 /* WIYAViewController.m */; };
 		2EC3A1331CA74C8600BFAC59 /* IMG_1745.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3A1321CA74C8600BFAC59 /* IMG_1745.PNG */; };
 		2EC3A1351CA74C8C00BFAC59 /* IMG_1743.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3A1341CA74C8C00BFAC59 /* IMG_1743.PNG */; };
@@ -60,6 +61,10 @@
 		2EC3A13F1CA74CD000BFAC59 /* IMG_1749.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3A13E1CA74CD000BFAC59 /* IMG_1749.PNG */; };
 		2EC3A1411CA74CD500BFAC59 /* IMG_1750.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2EC3A1401CA74CD500BFAC59 /* IMG_1750.PNG */; };
 		2ED0093C1CA74F8E003F0FF2 /* IMG_1746.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 2ED0093B1CA74F8E003F0FF2 /* IMG_1746.PNG */; };
+		2EFEDFB91CB06C5300EA452E /* air.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 2EFEDFB81CB06C5300EA452E /* air.scnp */; };
+		2EFEDFBB1CB06C6200EA452E /* bokeh.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EFEDFBA1CB06C6200EA452E /* bokeh.png */; };
+		2EFEDFBD1CB0778D00EA452E /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFEDFBC1CB0778D00EA452E /* SceneKit.framework */; };
+		2EFEDFBF1CB0782100EA452E /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFEDFBE1CB0782100EA452E /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +165,8 @@
 		2E9C56D01C82C41100CF332D /* HexColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HexColors.m; sourceTree = "<group>"; };
 		2E9C56D21C82DAA000CF332D /* bar_parts-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_parts-02.png"; sourceTree = "<group>"; };
 		2E9C56D41C82DAA900CF332D /* bar_parts-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bar_parts-01.png"; sourceTree = "<group>"; };
+		2EC0054B1CB0697000650222 /* Amur-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Amur-Bridging-Header.h"; sourceTree = "<group>"; };
+		2EC0054C1CB0697000650222 /* ParticleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleViewController.swift; sourceTree = "<group>"; };
 		2EC3A12F1CA72D4A00BFAC59 /* WIYAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WIYAViewController.h; sourceTree = "<group>"; };
 		2EC3A1301CA72D4A00BFAC59 /* WIYAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WIYAViewController.m; sourceTree = "<group>"; };
 		2EC3A1321CA74C8600BFAC59 /* IMG_1745.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1745.PNG; sourceTree = "<group>"; };
@@ -171,6 +178,10 @@
 		2EC3A13E1CA74CD000BFAC59 /* IMG_1749.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1749.PNG; sourceTree = "<group>"; };
 		2EC3A1401CA74CD500BFAC59 /* IMG_1750.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1750.PNG; sourceTree = "<group>"; };
 		2ED0093B1CA74F8E003F0FF2 /* IMG_1746.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_1746.PNG; sourceTree = "<group>"; };
+		2EFEDFB81CB06C5300EA452E /* air.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = air.scnp; sourceTree = "<group>"; };
+		2EFEDFBA1CB06C6200EA452E /* bokeh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bokeh.png; sourceTree = "<group>"; };
+		2EFEDFBC1CB0778D00EA452E /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		2EFEDFBE1CB0782100EA452E /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +189,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EFEDFBF1CB0782100EA452E /* CoreMotion.framework in Frameworks */,
+				2EFEDFBD1CB0778D00EA452E /* SceneKit.framework in Frameworks */,
 				2E9C56CB1C829B4900CF332D /* MapKit.framework in Frameworks */,
 				2E5BC5D41C824AB900E44618 /* QuartzCore.framework in Frameworks */,
 				2E5BC5D21C823EC200E44618 /* AVKit.framework in Frameworks */,
@@ -228,6 +241,8 @@
 		2E13B8C21C821E3C004DD0C2 /* Amur */ = {
 			isa = PBXGroup;
 			children = (
+				2EFEDFB81CB06C5300EA452E /* air.scnp */,
+				2EFEDFBA1CB06C6200EA452E /* bokeh.png */,
 				2E5BC5F71C827AB000E44618 /* SWReveal */,
 				2E5BC5D51C82637600E44618 /* Icons */,
 				2E5BC5BB1C822CE000E44618 /* ARKIT */,
@@ -256,6 +271,8 @@
 				2EC3A1301CA72D4A00BFAC59 /* WIYAViewController.m */,
 				2E024A2B1CB0497B00040DFA /* RealWIYAViewController.h */,
 				2E024A2C1CB0497B00040DFA /* RealWIYAViewController.m */,
+				2EC0054C1CB0697000650222 /* ParticleViewController.swift */,
+				2EC0054B1CB0697000650222 /* Amur-Bridging-Header.h */,
 			);
 			path = Amur;
 			sourceTree = "<group>";
@@ -289,6 +306,8 @@
 		2E5BC5B61C8227D700E44618 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2EFEDFBE1CB0782100EA452E /* CoreMotion.framework */,
+				2EFEDFBC1CB0778D00EA452E /* SceneKit.framework */,
 				2E9C56CA1C829B4900CF332D /* MapKit.framework */,
 				2E5BC5D31C824AB900E44618 /* QuartzCore.framework */,
 				2E5BC5D11C823EC200E44618 /* AVKit.framework */,
@@ -422,6 +441,7 @@
 		2E13B8B81C821E3C004DD0C2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Shreyas Hirday";
 				TargetAttributes = {
@@ -485,9 +505,11 @@
 				2E5BC5E91C82662700E44618 /* app_icons-05@2x.png in Resources */,
 				2EC3A1411CA74CD500BFAC59 /* IMG_1750.PNG in Resources */,
 				2E5BC5E11C8263E400E44618 /* app_icons-03@2x.png in Resources */,
+				2EFEDFB91CB06C5300EA452E /* air.scnp in Resources */,
 				2E5BC6031C827EF300E44618 /* top_bar_icons-06.png in Resources */,
 				2EC3A1351CA74C8C00BFAC59 /* IMG_1743.PNG in Resources */,
 				2E5BC5F41C8269CF00E44618 /* icons_color-04@2x.png in Resources */,
+				2EFEDFBB1CB06C6200EA452E /* bokeh.png in Resources */,
 				2E13B8D31C821E3C004DD0C2 /* Assets.xcassets in Resources */,
 				2E13B8D11C821E3C004DD0C2 /* Main.storyboard in Resources */,
 			);
@@ -530,6 +552,7 @@
 				2E9C56CE1C829CBF00CF332D /* LocationViewController.m in Sources */,
 				2E5BC6061C82808700E44618 /* SidebarTableViewController.m in Sources */,
 				2E5BC5FA1C827AD200E44618 /* SWRevealViewController.m in Sources */,
+				2EC0054D1CB0697000650222 /* ParticleViewController.swift in Sources */,
 				2E13B8C51C821E3C004DD0C2 /* main.m in Sources */,
 				2E5BC5C91C822D4C00E44618 /* AugmentedRealityController.m in Sources */,
 			);
@@ -670,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -678,9 +702,11 @@
 				);
 				INFOPLIST_FILE = Amur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Amur/Amur-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -688,6 +714,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -696,9 +723,10 @@
 				);
 				INFOPLIST_FILE = Amur/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shanifenne.Amur.Amur2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Amur/Amur-Bridging-Header.h";
 			};
 			name = Release;
 		};

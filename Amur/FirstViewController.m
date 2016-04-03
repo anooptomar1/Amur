@@ -13,22 +13,27 @@
 #import "SWRevealViewController.h"
 #import "HexColors.h"
 #import "LocationViewController.h"
+#import <SceneKit/SceneKit.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface FirstViewController () <CLLocationManagerDelegate>
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
+@property (nonatomic, strong) CMAttitude *attitude;
+@property(nonatomic, strong) CMMotionManager *motionManager;
 
 @end
 
 @implementation FirstViewController
 
+/*
 -(void)viewWillAppear:(BOOL)animated{
    
     
     int i = 0;
     for(UIView *view in [self.view subviews]){
         if(view.tag != 3 && view.tag != 4 && view.tag != 5){
-            [self setAnimation:view withNum:i];
+            //[self setAnimation:view withNum:i];
             i++;
         }
     }
@@ -37,9 +42,17 @@
     
     
 }
+ */
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    if(self.motionManager == nil){
+        self.motionManager = [[CMMotionManager alloc]init];
+        NSLog(@"motion manager is nil");
+    }
+
+    
     // Do any additional setup after loading the view, typically from a nib.
     
    self.sidebarButton.image = [[UIImage imageNamed:@"top_bar_icons-07.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]
@@ -95,13 +108,102 @@
     [avCaptureSession setSessionPreset:AVCaptureSessionPresetHigh];
     [avCaptureSession startRunning];
     
+    float cameraDistance = 2;
+    SCNView *sceneKitView = [[SCNView alloc] initWithFrame:self.view.bounds];
+    SCNNode *cameraNode = [[SCNNode alloc]init];
+    
+    SCNNode *currentDrawingNode;
+    CAShapeLayer *currentDrawingLayer;
+    
+    UIBezierPath *hermitePath;
+    
+    NSMutableArray *points = [[NSMutableArray alloc]init];
+    
+    [self.view addSubview:sceneKitView];
+    sceneKitView.backgroundColor = [UIColor clearColor];
+    sceneKitView.opaque = NO;
+    
+    sceneKitView.scene = [[SCNScene alloc]init];
+    
+    SCNNode *centreNode = [[SCNNode alloc]init];
+    centreNode.position = SCNVector3Make(0, 0, 0);
+    
+    SCNCamera *camera = [[SCNCamera alloc]init];
+    camera.xFov = 60;
+    camera.yFov = 60;
+    
+    cameraNode.camera = camera;
+    [sceneKitView.scene.rootNode addChildNode:cameraNode];
+    
+    SCNLookAtConstraint *constraint = [SCNLookAtConstraint lookAtConstraintWithTarget:centreNode];
+    
+    cameraNode.constraints = [NSArray arrayWithObject:constraint];
+    
+    cameraNode.pivot = SCNMatrix4MakeTranslation(0, 0, -cameraDistance);
+    
+    SCNParticleSystem *air = [SCNParticleSystem particleSystemNamed:@"air.scnp" inDirectory:nil];
+    
+    [sceneKitView.scene.rootNode addParticleSystem:air];
+    
+
+    self.motionManager.deviceMotionUpdateInterval = 1 / 60;
+    
+    
+   // NSLog(@"pre-test");
+    
+    NSOperationQueue *theQueue = [NSOperationQueue mainQueue];
+    
+    
+    [self.motionManager startDeviceMotionUpdatesToQueue:theQueue withHandler:^(CMDeviceMotion * _Nullable motion, NSError * _Nullable error) {
+        
+        
+        
+            if(motion != nil){
+                
+                
+                if(self.attitude == nil){
+                    
+                    self.attitude = motion.attitude;
+                    
+                }
+                
+                double dRoll =self.attitude.roll - motion.attitude.roll;
+                double dPitch = self.attitude.pitch + motion.attitude.pitch;
+                
+                NSLog(@"Roll: %f, Pitch: %f", dRoll, dPitch);
+                
+                [cameraNode setEulerAngles:SCNVector3Make(dPitch, dRoll, 0.0)];
+                
+                
+                
+                
+                
+            }
+            else{
+                if(motion == nil) NSLog(@"motion is nil");
+                if(error) NSLog(@"ERROR: %@",error);
+            }
+
+            
+       
+        
+                
+    }];
+     
+     
+    
+ 
+    
+    
+   
+    
+    
     
     
 #endif
     
-    [self startStandardUpdates];
     
-    UIImageView *barImageView = [[UIImageView alloc]initWithFrame:CGRectMake(250, 430, 165, 180)];
+    UIImageView *barImageView = [[UIImageView alloc]initWithFrame:CGRectMake(215, 360, 125, 180)];
     
     [barImageView setImage:[[UIImage imageNamed:@"bar_parts-01.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
     
@@ -185,7 +287,7 @@
                 NSArray *viewsToRemove = [self.view subviews];
                 for (UIView *v in viewsToRemove) {
                     if(v.tag != 3 && v.tag != 4){
-                        [v removeFromSuperview];
+                        //[v removeFromSuperview];
                     }
                 }
 
@@ -204,13 +306,13 @@
                 
                 [controller addAction:action];
                 
-                [self presentViewController:controller animated:YES completion:nil];
+                //[self presentViewController:controller animated:YES completion:nil];
                 
-                NSString *data = [NSString stringWithFormat:@"AQI : %d\nDescription: %@ ",AQI,description];
+     
                 
                 
           
-                [self generateButtonsForView];
+                //[self generateButtonsForView];
                 
                 CLGeocoder *geocoder = [[CLGeocoder alloc] init];
                 
@@ -224,7 +326,7 @@
                         if(v.tag == 4){
                             int offset = [self offsetCalculator:AQI];
                             NSLog(@"Offset: %d",offset);
-                            [v setFrame:CGRectMake(255, offset, 160, 30)];
+                            [v setFrame:CGRectMake(215, offset, 160, 30)];
                             //[v layoutSubviews];
                             foundOne = YES;
                         }
@@ -237,7 +339,7 @@
                     if(!foundOne){
                         int offset = [self offsetCalculator:AQI];
                         NSLog(@"Offset: %d",offset);
-                        UIImageView *indicator = [[UIImageView alloc]initWithFrame:CGRectMake(255,offset, 160, 30)];
+                        UIImageView *indicator = [[UIImageView alloc]initWithFrame:CGRectMake(215,offset, 160, 30)];
                         
                         [indicator setImage:[[UIImage imageNamed:@"bar_parts-02.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
                         
@@ -248,7 +350,7 @@
                     }
                     if(!foundTwo){
                         
-                        UITextField *tf = [[UITextField alloc]initWithFrame:CGRectMake(283, 572, 95, 30)];
+                        UITextField *tf = [[UITextField alloc]initWithFrame:CGRectMake(230, 495, 95, 30)];
                         
                         [tf setText:[NSString stringWithFormat:@"%d\n%@",AQI,cityname]];
                         [tf setTextColor:[UIColor whiteColor]];
@@ -311,9 +413,11 @@
         multiplier = 1;
     }
     
-    return start + multiplier * 30;
+    return start + multiplier * 10;
     
 }
+
+
 
 -(void)generateButtonsForView {
     float viewWidth = self.view.frame.size.width;
@@ -353,6 +457,7 @@
 }
 
 
+
 -(void)setAnimation:(UIView *)view withNum:(int)num{
     
     float duration = 0.5f;
@@ -387,10 +492,12 @@
     
 }
 
+/*
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.view.layer removeAllAnimations]; // or whatever you need to use to remove your specific animation
+    //[self.view.layer removeAllAnimations]; // or whatever you need to use to remove your specific animation
 }
+ */
 
 -(int)getBubbleCount:(int)AQI{
     
@@ -453,7 +560,7 @@
             NSArray *viewsToRemove = [self.view subviews];
             for (UIView *v in viewsToRemove) {
                 if(v.tag != 3 && v.tag != 4){
-                    [v removeFromSuperview];
+                    //[v removeFromSuperview];
                 }
             }
             
@@ -472,13 +579,13 @@
             
             [controller addAction:action];
             
-            [self presentViewController:controller animated:YES completion:nil];
+            //[self presentViewController:controller animated:YES completion:nil];
             
             NSString *data = [NSString stringWithFormat:@"AQI : %d\nDescription: %@ ",AQI,description];
             
             
             
-            [self generateButtonsForView];
+            //[self generateButtonsForView];
             
             BOOL foundOne = NO;
             BOOL foundTwo = NO;
@@ -511,7 +618,7 @@
             }
             if(!foundTwo){
                 
-                UITextField *tf = [[UITextField alloc]initWithFrame:CGRectMake(283, 572, 95, 30)];
+                UITextField *tf = [[UITextField alloc]initWithFrame:CGRectMake(220, 495, 95, 30)];
                 
                 [tf setText:[NSString stringWithFormat:@"%d\n%@",AQI,name]];
                 [tf setTextColor:[UIColor whiteColor]];
