@@ -26,7 +26,7 @@
     
     UICollectionViewFlowLayout *layout=[[UICollectionViewFlowLayout alloc] init];
 
-    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 160, 350, 450) collectionViewLayout:layout];
+    self.collectionView = [[UICollectionView alloc]initWithFrame:CGRectMake(10, 160, 300, 450) collectionViewLayout:layout];
     [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:@"cellIdentifier"];
     self.collectionView.delegate = self;
     self.collectionView.dataSource = self;
@@ -202,7 +202,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    return CGSizeMake(100, 100);
+    return CGSizeMake(80, 80);
     
 }
 

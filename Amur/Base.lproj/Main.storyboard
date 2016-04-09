@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="2336" y="-20"/>
         </scene>
-        <!--Amur-->
+        <!--What's In My Air?-->
         <scene sceneID="wji-Ii-kfB">
             <objects>
                 <viewController id="eaW-Ax-cI5" customClass="RealWIYAViewController" sceneMemberID="viewController">
@@ -119,13 +119,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Amur" image="icons_color-02.png" id="WOz-f1-Pqr"/>
+                    <tabBarItem key="tabBarItem" title="What's In My Air?" image="whats-in-my-air.png" selectedImage="what's-in-my-air_select.png" id="WOz-f1-Pqr"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BRn-uW-9jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938" y="901"/>
         </scene>
-        <!--Help Out-->
+        <!--Show Amur-->
         <scene sceneID="bYN-F9-UEI">
             <objects>
                 <viewController id="02m-sX-8T5" customClass="WIYAViewController" sceneMemberID="viewController">
@@ -138,7 +138,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help Out" image="icons_color-04.png" id="seJ-Gi-I56"/>
+                    <tabBarItem key="tabBarItem" title="Show Amur" image="show-amur.png" selectedImage="show-amur_select.png" id="seJ-Gi-I56"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="COg-wu-c3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,7 +157,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" image="icons_color-05.png" id="ktO-Wb-DbV"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings.png" selectedImage="settings_select.png" id="ktO-Wb-DbV">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="settings_select@2x.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZNZ-zF-Nky" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -184,11 +188,11 @@
             </objects>
             <point key="canvasLocation" x="442" y="-1084"/>
         </scene>
-        <!--Camera-->
+        <!--AQI Visualization-->
         <scene sceneID="AoV-C5-pjx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XS4-8b-xxb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Camera" image="icons_color-03.png" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="AQI Visualization" image="aqi-visualizaition.png" selectedImage="aqi-visualization_select.png" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dd8-MM-jU5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -205,10 +209,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icons_color-02.png" width="37" height="37"/>
+        <image name="aqi-visualizaition.png" width="37" height="37"/>
+        <image name="aqi-visualization_select.png" width="37" height="37"/>
         <image name="icons_color-03.png" width="37" height="37"/>
-        <image name="icons_color-04.png" width="37" height="37"/>
-        <image name="icons_color-05.png" width="37" height="37"/>
+        <image name="settings.png" width="37" height="37"/>
+        <image name="settings_select.png" width="37" height="38"/>
+        <image name="settings_select@2x.png" width="67" height="67"/>
+        <image name="show-amur.png" width="37" height="37"/>
+        <image name="show-amur_select.png" width="37" height="38"/>
         <image name="top_bar_icons-07.png" width="67" height="67"/>
+        <image name="what's-in-my-air_select.png" width="37" height="37"/>
+        <image name="whats-in-my-air.png" width="37" height="37"/>
     </resources>
 </document>

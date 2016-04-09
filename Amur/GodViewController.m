@@ -26,25 +26,36 @@
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.tabBar.bounds;
     gradient.colors = [NSArray arrayWithObjects:(id)[[UIColor hx_colorWithHexString:@"471d29"] CGColor], (id)[[UIColor hx_colorWithHexString:@"421d29"] CGColor], nil];
-    [self.tabBar.layer insertSublayer:gradient atIndex:0];
+    [self.tabBar setBackgroundColor:[UIColor whiteColor]];
+    //[self.tabBar.layer insertSublayer:gradient atIndex:0];
     
     int i = 0;
     for(UIViewController *vc in self.viewControllers){
         if(i == 0){
-            vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-02.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.image = [[UIImage imageNamed:@"whats-in-my-air.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"what's-in-my-air_select.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.title = @"What's In My Air?";
         }
         else if(i == 1){
-            vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-03.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.image = [[UIImage imageNamed:@"aqi-visualizaition.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"aqi-visualization_select.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.title = @"AQI Visualization";
         }
         else if(i == 2){
-            vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-04.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.image = [[UIImage imageNamed:@"show-amur.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"show-amur_select.png"]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.title = @"Show Amur";
         }
         else if(i == 3){
-            vc.tabBarItem.image = [[UIImage imageNamed:@"icons_color-05.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.image = [[UIImage imageNamed:@"settings.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.selectedImage = [[UIImage imageNamed:@"settings_select.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+            vc.tabBarItem.title = @"Settings";
         }
         i++;
-        
+     
+
     }
+    
 }
 
 -(UIImage *)imageFromColor:(UIColor *)color forSize:(CGSize)size withCornerRadius:(CGFloat)radius

@@ -10,7 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import "LocationViewController.h"
 
-@interface FirstViewController : UIViewController<sendDataProtocol>
+@interface FirstViewController : UIViewController<sendDataProtocol,UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sidebarButton;
 - (IBAction)goToMap:(id)sender;
 

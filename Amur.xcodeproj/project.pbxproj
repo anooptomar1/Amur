@@ -45,6 +45,19 @@
 		2E5BC6031C827EF300E44618 /* top_bar_icons-06.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BC6021C827EF300E44618 /* top_bar_icons-06.png */; };
 		2E5BC6061C82808700E44618 /* SidebarTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E5BC6051C82808700E44618 /* SidebarTableViewController.m */; };
 		2E5BC6081C828B3900E44618 /* top_bar_icons-07.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E5BC6071C828B3900E44618 /* top_bar_icons-07.png */; };
+		2E98342F1CB98C0A00F039C2 /* whats-in-my-air@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98342E1CB98C0A00F039C2 /* whats-in-my-air@2x.png */; };
+		2E9834311CB98C1000F039C2 /* aqi-visualizaition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834301CB98C1000F039C2 /* aqi-visualizaition@2x.png */; };
+		2E9834331CB98C1600F039C2 /* show-amur@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834321CB98C1600F039C2 /* show-amur@2x.png */; };
+		2E9834351CB98C1D00F039C2 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834341CB98C1D00F039C2 /* settings@2x.png */; };
+		2E9834371CB98C2400F039C2 /* what's-in-my-air_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834361CB98C2400F039C2 /* what's-in-my-air_select@2x.png */; };
+		2E9834391CB98C2C00F039C2 /* location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834381CB98C2C00F039C2 /* location@2x.png */; };
+		2E98343B1CB98C3200F039C2 /* What-is-AQI@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98343A1CB98C3200F039C2 /* What-is-AQI@2x.png */; };
+		2E9834431CB991FB00F039C2 /* what's-in-my-air_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834421CB991FB00F039C2 /* what's-in-my-air_select@2x.png */; };
+		2E9834451CB9920200F039C2 /* aqi-visualization_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834441CB9920200F039C2 /* aqi-visualization_select@2x.png */; };
+		2E9834471CB9920A00F039C2 /* show-amur_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834461CB9920A00F039C2 /* show-amur_select@2x.png */; };
+		2E9834491CB992E100F039C2 /* settings_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9834481CB992E100F039C2 /* settings_select@2x.png */; };
+		2E98344B1CB9AE4500F039C2 /* AQIScale.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98344A1CB9AE4500F039C2 /* AQIScale.png */; };
+		2E98344D1CB9AE5400F039C2 /* Scale_thing.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E98344C1CB9AE5400F039C2 /* Scale_thing.png */; };
 		2E9C56CB1C829B4900CF332D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E9C56CA1C829B4900CF332D /* MapKit.framework */; };
 		2E9C56CE1C829CBF00CF332D /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C56CD1C829CBF00CF332D /* LocationViewController.m */; };
 		2E9C56D11C82C41100CF332D /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E9C56D01C82C41100CF332D /* HexColors.m */; };
@@ -158,6 +171,19 @@
 		2E5BC6041C82808700E44618 /* SidebarTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SidebarTableViewController.h; sourceTree = "<group>"; };
 		2E5BC6051C82808700E44618 /* SidebarTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SidebarTableViewController.m; sourceTree = "<group>"; };
 		2E5BC6071C828B3900E44618 /* top_bar_icons-07.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_bar_icons-07.png"; sourceTree = "<group>"; };
+		2E98342E1CB98C0A00F039C2 /* whats-in-my-air@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "whats-in-my-air@2x.png"; path = "../../icons/whats-in-my-air@2x.png"; sourceTree = "<group>"; };
+		2E9834301CB98C1000F039C2 /* aqi-visualizaition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "aqi-visualizaition@2x.png"; path = "../../icons/aqi-visualizaition@2x.png"; sourceTree = "<group>"; };
+		2E9834321CB98C1600F039C2 /* show-amur@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "show-amur@2x.png"; path = "../../icons/show-amur@2x.png"; sourceTree = "<group>"; };
+		2E9834341CB98C1D00F039C2 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings@2x.png"; path = "../../icons/settings@2x.png"; sourceTree = "<group>"; };
+		2E9834361CB98C2400F039C2 /* what's-in-my-air_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "what's-in-my-air_select@2x.png"; path = "../../icons/what's-in-my-air_select@2x.png"; sourceTree = "<group>"; };
+		2E9834381CB98C2C00F039C2 /* location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "location@2x.png"; path = "../../icons/location@2x.png"; sourceTree = "<group>"; };
+		2E98343A1CB98C3200F039C2 /* What-is-AQI@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "What-is-AQI@2x.png"; path = "../../icons/What-is-AQI@2x.png"; sourceTree = "<group>"; };
+		2E9834421CB991FB00F039C2 /* what's-in-my-air_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "what's-in-my-air_select@2x.png"; path = "../../icons/what's-in-my-air_select@2x.png"; sourceTree = "<group>"; };
+		2E9834441CB9920200F039C2 /* aqi-visualization_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "aqi-visualization_select@2x.png"; path = "../../icons/aqi-visualization_select@2x.png"; sourceTree = "<group>"; };
+		2E9834461CB9920A00F039C2 /* show-amur_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "show-amur_select@2x.png"; path = "../../icons/show-amur_select@2x.png"; sourceTree = "<group>"; };
+		2E9834481CB992E100F039C2 /* settings_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "settings_select@2x.png"; path = "../../icons/settings_select@2x.png"; sourceTree = "<group>"; };
+		2E98344A1CB9AE4500F039C2 /* AQIScale.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = AQIScale.png; path = ../../other/AQIScale.png; sourceTree = "<group>"; };
+		2E98344C1CB9AE5400F039C2 /* Scale_thing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Scale_thing.png; path = ../../other/Scale_thing.png; sourceTree = "<group>"; };
 		2E9C56CA1C829B4900CF332D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2E9C56CC1C829CBF00CF332D /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
 		2E9C56CD1C829CBF00CF332D /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
@@ -342,6 +368,19 @@
 		2E5BC5D51C82637600E44618 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				2E98342E1CB98C0A00F039C2 /* whats-in-my-air@2x.png */,
+				2E9834301CB98C1000F039C2 /* aqi-visualizaition@2x.png */,
+				2E9834321CB98C1600F039C2 /* show-amur@2x.png */,
+				2E98344C1CB9AE5400F039C2 /* Scale_thing.png */,
+				2E9834341CB98C1D00F039C2 /* settings@2x.png */,
+				2E9834361CB98C2400F039C2 /* what's-in-my-air_select@2x.png */,
+				2E9834381CB98C2C00F039C2 /* location@2x.png */,
+				2E98344A1CB9AE4500F039C2 /* AQIScale.png */,
+				2E9834441CB9920200F039C2 /* aqi-visualization_select@2x.png */,
+				2E9834421CB991FB00F039C2 /* what's-in-my-air_select@2x.png */,
+				2E9834461CB9920A00F039C2 /* show-amur_select@2x.png */,
+				2E9834481CB992E100F039C2 /* settings_select@2x.png */,
+				2E98343A1CB98C3200F039C2 /* What-is-AQI@2x.png */,
 				2EC3A1401CA74CD500BFAC59 /* IMG_1750.PNG */,
 				2EC3A13E1CA74CD000BFAC59 /* IMG_1749.PNG */,
 				2EC3A13C1CA74CC900BFAC59 /* IMG_1748.PNG */,
@@ -487,11 +526,16 @@
 				2E9C56D31C82DAA000CF332D /* bar_parts-02.png in Resources */,
 				2ED0093C1CA74F8E003F0FF2 /* IMG_1746.PNG in Resources */,
 				2E5BC5E71C82661500E44618 /* app_icons-04@2x.png in Resources */,
+				2E9834331CB98C1600F039C2 /* show-amur@2x.png in Resources */,
+				2E9834311CB98C1000F039C2 /* aqi-visualizaition@2x.png in Resources */,
 				2E9C56D51C82DAA900CF332D /* bar_parts-01.png in Resources */,
 				2EC3A1371CA74C9E00BFAC59 /* IMG_1744.PNG in Resources */,
+				2E98344D1CB9AE5400F039C2 /* Scale_thing.png in Resources */,
 				2EC3A1391CA74CA500BFAC59 /* IMG_1742.PNG in Resources */,
 				2E5BC5F01C8269C500E44618 /* icons_color-02@2x.png in Resources */,
 				2E5BC5E31C82642F00E44618 /* app_icons-01@2x.png in Resources */,
+				2E9834471CB9920A00F039C2 /* show-amur_select@2x.png in Resources */,
+				2E98343B1CB98C3200F039C2 /* What-is-AQI@2x.png in Resources */,
 				2E5BC5E51C8265B200E44618 /* app_icons-02@2x.png in Resources */,
 				2E5BC5EE1C8269BF00E44618 /* icons_color-01@2x.png in Resources */,
 				2E5BC5F21C8269CB00E44618 /* icons_color-03@2x.png in Resources */,
@@ -502,14 +546,22 @@
 				2EC3A1331CA74C8600BFAC59 /* IMG_1745.PNG in Resources */,
 				2E13B8D61C821E3C004DD0C2 /* LaunchScreen.storyboard in Resources */,
 				2EC3A13F1CA74CD000BFAC59 /* IMG_1749.PNG in Resources */,
+				2E9834451CB9920200F039C2 /* aqi-visualization_select@2x.png in Resources */,
 				2E5BC5E91C82662700E44618 /* app_icons-05@2x.png in Resources */,
 				2EC3A1411CA74CD500BFAC59 /* IMG_1750.PNG in Resources */,
 				2E5BC5E11C8263E400E44618 /* app_icons-03@2x.png in Resources */,
+				2E98344B1CB9AE4500F039C2 /* AQIScale.png in Resources */,
+				2E9834371CB98C2400F039C2 /* what's-in-my-air_select@2x.png in Resources */,
 				2EFEDFB91CB06C5300EA452E /* air.scnp in Resources */,
 				2E5BC6031C827EF300E44618 /* top_bar_icons-06.png in Resources */,
 				2EC3A1351CA74C8C00BFAC59 /* IMG_1743.PNG in Resources */,
+				2E9834391CB98C2C00F039C2 /* location@2x.png in Resources */,
 				2E5BC5F41C8269CF00E44618 /* icons_color-04@2x.png in Resources */,
+				2E98342F1CB98C0A00F039C2 /* whats-in-my-air@2x.png in Resources */,
 				2EFEDFBB1CB06C6200EA452E /* bokeh.png in Resources */,
+				2E9834431CB991FB00F039C2 /* what's-in-my-air_select@2x.png in Resources */,
+				2E9834491CB992E100F039C2 /* settings_select@2x.png in Resources */,
+				2E9834351CB98C1D00F039C2 /* settings@2x.png in Resources */,
 				2E13B8D31C821E3C004DD0C2 /* Assets.xcassets in Resources */,
 				2E13B8D11C821E3C004DD0C2 /* Main.storyboard in Resources */,
 			);

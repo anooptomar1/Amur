@@ -21,6 +21,7 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) CMAttitude *attitude;
 @property(nonatomic, strong) CMMotionManager *motionManager;
+@property(nonatomic, strong) UIView *swipy;
 
 @end
 
@@ -112,12 +113,7 @@
     SCNView *sceneKitView = [[SCNView alloc] initWithFrame:self.view.bounds];
     SCNNode *cameraNode = [[SCNNode alloc]init];
     
-    SCNNode *currentDrawingNode;
-    CAShapeLayer *currentDrawingLayer;
     
-    UIBezierPath *hermitePath;
-    
-    NSMutableArray *points = [[NSMutableArray alloc]init];
     
     [self.view addSubview:sceneKitView];
     sceneKitView.backgroundColor = [UIColor clearColor];
@@ -149,7 +145,6 @@
     self.motionManager.deviceMotionUpdateInterval = 1 / 60;
     
     
-   // NSLog(@"pre-test");
     
     NSOperationQueue *theQueue = [NSOperationQueue mainQueue];
     
@@ -170,7 +165,7 @@
                 double dRoll =self.attitude.roll - motion.attitude.roll;
                 double dPitch = self.attitude.pitch + motion.attitude.pitch;
                 
-                NSLog(@"Roll: %f, Pitch: %f", dRoll, dPitch);
+                //NSLog(@"Roll: %f, Pitch: %f", dRoll, dPitch);
                 
                 [cameraNode setEulerAngles:SCNVector3Make(dPitch, dRoll, 0.0)];
                 
@@ -202,16 +197,35 @@
     
 #endif
     
+    [self startStandardUpdates];
     
-    UIImageView *barImageView = [[UIImageView alloc]initWithFrame:CGRectMake(215, 360, 125, 180)];
+   
     
-    [barImageView setImage:[[UIImage imageNamed:@"bar_parts-01.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+  
     
-    barImageView.tag = 3;
-    
-    [self.view addSubview:barImageView];
+    self.swipy = [[UIView alloc] initWithFrame:CGRectMake(0, self.view.bounds.origin.y + 480, self.view.bounds.size.width, 120)];
     
     
+    [self.swipy setBackgroundColor:[UIColor whiteColor]];
+    
+    UISwipeGestureRecognizer *ges = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    ges.delegate = self;
+    
+    ges.direction = UISwipeGestureRecognizerDirectionUp;
+    
+    UISwipeGestureRecognizer *gesTwo = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    
+    gesTwo.direction = UISwipeGestureRecognizerDirectionDown;
+    
+    gesTwo.delegate = self;
+    
+    [self.swipy addGestureRecognizer:ges];
+    [self.swipy addGestureRecognizer:gesTwo];
+    
+
+    
+    [self.view addSubview:self.swipy];
     
     
 }
@@ -221,6 +235,98 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)swipe:(UISwipeGestureRecognizer *)ges{
+    
+    NSLog(@"Swiped");
+    
+    if(ges.direction == UISwipeGestureRecognizerDirectionUp){
+        
+        [UIView animateWithDuration:.5 animations:^{
+           
+            
+            bool foundOne = NO;
+            bool foundTwo = NO;
+            
+            for(UIView *sub in self.swipy.subviews){
+                
+                if(sub.tag == 3 || sub.tag == 7){
+                    
+                    if(sub.tag == 3) foundOne = YES;
+                    if(sub.tag == 7) foundTwo = YES;
+                    
+                    if([sub isHidden]){
+                        [sub setHidden:NO];
+                    }
+                    
+                }
+                
+            }
+            
+            
+            ges.view.frame = CGRectMake(0, self.view.bounds.origin.y + 400, self.view.bounds.size.width, 120);
+            
+            if(!foundOne){
+            
+            UIImageView *barImageView = [[UIImageView alloc]initWithFrame:CGRectMake(10, 30, 300, 30)];
+            
+            [barImageView setImage:[[UIImage imageNamed:@"AQIScale.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+            
+            barImageView.tag = 3;
+            
+            [ges.view addSubview:barImageView];
+                
+            }
+            
+            if(!foundTwo){
+                
+                NSLog(@"Adding button");
+            
+            UIButton *infoBtn = [[UIButton alloc]initWithFrame:CGRectMake(100, 70, 80, 30)];
+            [infoBtn setTitle:@"Info" forState:UIControlStateNormal];
+                [infoBtn setTitleColor:[UIColor orangeColor] forState:UIControlStateNormal];
+            
+            [infoBtn addTarget:self action:@selector(showInfoDialog) forControlEvents:UIControlEventTouchUpInside];
+            
+            infoBtn.tag = 7;
+            
+            [ges.view addSubview:infoBtn];
+                
+            }
+            
+        }];
+        
+    }
+    else{
+        
+        ges.view.frame = CGRectMake(0, self.view.bounds.origin.y + 480, self.view.bounds.size.width, 120);
+        
+        for(UIView *subView in ges.view.subviews){
+            
+            if(subView.tag == 3 || subView.tag == 4 || subView.tag == 5 || subView.tag == 6 || subView.tag == 7){
+                
+                [subView setHidden:YES];
+            }
+            
+        }
+        
+    }
+    
+}
+
+-(void)showInfoDialog{
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"What is AQI?" message:@"The AQI is an index for reporting daily air quality. It tells you how clean or polluted your air is, and what associated health effects might be a concern for you. The AQI focuses on health effects you may experience within a few hours or days after breathing polluted air." preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Close" style:UIAlertActionStyleCancel handler:nil];
+    
+    [alertController addAction:action];
+    
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+    
+    
 }
 
 -(void)startStandardUpdates
@@ -284,35 +390,21 @@
             else{
                 
                 NSLog(@"NOT ERROR");
+                /*
                 NSArray *viewsToRemove = [self.view subviews];
                 for (UIView *v in viewsToRemove) {
                     if(v.tag != 3 && v.tag != 4){
-                        //[v removeFromSuperview];
+                        [v removeFromSuperview];
                     }
                 }
+                 */
 
-                
-                //NSLog(@"JSON: %@",responseObject);
                 
                 int AQI = [responseObject[@"breezometer_aqi"] intValue];
                 
-                NSString *description = responseObject[@"breezometer_description"];
                 
-                NSString *pollutant = responseObject[@"dominant_pollutant_description"];
+                NSString *description = @"moderate";
                 
-                UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Woah!" message:[NSString stringWithFormat:@"The dominant pollutant is %@",pollutant] preferredStyle:UIAlertControllerStyleAlert];
-                
-                UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
-                
-                [controller addAction:action];
-                
-                //[self presentViewController:controller animated:YES completion:nil];
-                
-     
-                
-                
-          
-                //[self generateButtonsForView];
                 
                 CLGeocoder *geocoder = [[CLGeocoder alloc] init];
                 
@@ -322,43 +414,59 @@
                     
                     BOOL foundOne = NO;
                     BOOL foundTwo = NO;
-                    for(UIView* v in self.view.subviews){
+                    BOOL foundThree = NO;
+                    for(UIView* v in self.swipy.subviews){
                         if(v.tag == 4){
                             int offset = [self offsetCalculator:AQI];
                             NSLog(@"Offset: %d",offset);
-                            [v setFrame:CGRectMake(215, offset, 160, 30)];
-                            //[v layoutSubviews];
+                            [v setFrame:CGRectMake(offset, 30, 60, 30)];
                             foundOne = YES;
                         }
                         if(v.tag == 5){
-                            [(UITextField *)v setText:[NSString stringWithFormat:@"%d\n%@",AQI,cityname]];
+                            [(UILabel *)v setText:[NSString stringWithFormat:@"%d:%@",AQI,description]];
                             foundTwo = YES;
+                        }
+                        if(v.tag == 6){
+                            [(UILabel *)v setText:[NSString stringWithFormat:@"%@",cityname]];
+                            foundThree = YES;
                         }
                     }
                     
                     if(!foundOne){
                         int offset = [self offsetCalculator:AQI];
                         NSLog(@"Offset: %d",offset);
-                        UIImageView *indicator = [[UIImageView alloc]initWithFrame:CGRectMake(215,offset, 160, 30)];
+                        UIImageView *indicator = [[UIImageView alloc]initWithFrame:CGRectMake(offset,30, 60, 30)];
                         
-                        [indicator setImage:[[UIImage imageNamed:@"bar_parts-02.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
+                        [indicator setImage:[[UIImage imageNamed:@"Scale_thing.png"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal]];
                         
                         indicator.tag = 4;
                         
-                        [self.view addSubview:indicator];
+                        [self.swipy addSubview:indicator];
                         
                     }
                     if(!foundTwo){
                         
-                        UITextField *tf = [[UITextField alloc]initWithFrame:CGRectMake(230, 495, 95, 30)];
+                        UILabel *tf = [[UILabel alloc]initWithFrame:CGRectMake(30, 60, 70, 30)];
                         
-                        [tf setText:[NSString stringWithFormat:@"%d\n%@",AQI,cityname]];
-                        [tf setTextColor:[UIColor whiteColor]];
+                        [tf setText:[NSString stringWithFormat:@"%d:%@",AQI,description]];
+                        [tf setTextColor:[UIColor redColor]];
                         UIFont *font = [UIFont fontWithName:@"Avenir" size:10.0];
                         [tf setFont:font];
                         tf.tag = 5;
-                        [self.view addSubview:tf];
+                        [self.swipy addSubview:tf];
                         
+                    }
+                    
+                    if(!foundThree){
+                        
+                        UILabel *cn = [[UILabel alloc]initWithFrame:CGRectMake(200, 60, 70, 30)];
+                        [cn setText:cityname];
+                        [cn setTextColor:[UIColor redColor]];
+                        
+                        UIFont *font = [UIFont fontWithName:@"Avenir" size:10.0];
+                        [cn setFont:font];
+                        cn.tag = 6;
+                        [self.swipy addSubview:cn];
                     }
 
                     
@@ -387,7 +495,7 @@
 
 -(int)offsetCalculator:(int)AQI{
     
-    int start = 370;
+    int start = 30;
     
     int multiplier = 0;
     
